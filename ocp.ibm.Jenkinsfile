@@ -1,4 +1,4 @@
-def git_repo = 'https://github.com/elyusron/appsodytest.git'
+def git_repo = 'https://github.com/penta-data/appsodytest.git'
 def public_route_prefix = ''
 
 def git_branch = 'master'
