@@ -68,7 +68,7 @@ node (){
             credentialsId: 'oc-demo',
             usernameVariable: 'oc_username', passwordVariable: 'oc_password']]) {
                 //   sh 'oc login -u=${oc_username} -p=${oc_password} https://ocp.mylabzolution.com:8443 --insecure-skip-tls-verify=true'
-                    sh 'oc login --token=KehJFsZ5K7IUhfImlGlAXqukBPgGeIghbBglLP1uISg --server=https://c101-e.jp-tok.containers.cloud.ibm.com:30157'
+                    sh 'oc login --token=2Jwje_0s5HX1H8A6xc3LVYo9wdTqoq-x-vKg4iCa2bw --server=https://c100-e.au-syd.containers.cloud.ibm.com:30247'
                }
 
         appMajorVersion = appFullVersion.substring(0, appFullVersion.indexOf('.'))
