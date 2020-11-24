@@ -1,5 +1,5 @@
 def git_repo = 'https://github.com/penta-data/appsodytest.git'
-def public_route_prefix = ''
+def public_route_prefix = 'appsody'
 
 def git_branch = 'master'
 def env = 'demo'
@@ -12,7 +12,7 @@ def oc_command = 'create'
 
 def cpu_limit = '30m'
 def memory_limit = '300Mi'
-def max_replica_count = 1
+def max_replica_count = 2
 
 
 def appName
