@@ -131,7 +131,7 @@ node (){
             oc process -f ./cicd-template/openshift/deployment-config-template.yaml -n ${ocp_project} \
                 -p APP_NAME=${appName} -p APP_FULL_VERSION=${appFullVersion} -p APP_MAJOR_VERSION=${appMajorVersion}  \
                 -p GIT_COMMIT_ID=${gitCommitId} -p JENKINS_BUILD_NUMBER=${BUILD_NUMBER} -p CPU_LIMIT=${cpu_limit} -p MEM_LIMIT=${memory_limit} \
-                | oc ${oc_command} -n ${ocp_project} --force=true -f -
+                | oc ${oc_command} -n ${ocp_project}  -f -
             sleep 5
             """
 
@@ -144,7 +144,7 @@ node (){
                 oc process -f ./cicd-template/openshift/route-template.yaml -n ${ocp_project} \
                     -p APP_NAME=${appName} -p APP_FULL_VERSION=${appFullVersion} -p APP_MAJOR_VERSION=${appMajorVersion}  \
                     -p GIT_COMMIT_ID=${gitCommitId} -p PUBLIC_ROUTE_PREFIX=${public_route_prefix} -p JENKINS_BUILD_NUMBER=${BUILD_NUMBER} \
-                    | oc ${oc_command} -n ${ocp_project} --force=true -f -
+                    | oc ${oc_command} -n ${ocp_project}  -f -
                 sleep 5
 
                 oc rollout status dc/${appName}-v${appMajorVersion}
