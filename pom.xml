@@ -101,7 +101,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>Main</mainClass>
+                            <mainClass>id.co.pentadata.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
