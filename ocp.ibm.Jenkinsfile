@@ -10,7 +10,7 @@ def nexus_deploy_repo = "$nexus_base_url/repository/maven-releases/"
 def ocp_project = 'default'
 def ocp_url = 'https://console-openshift-console.ocp-pos-fdeea28e4a34dee3e8b3354a9cbfc9f5-0000.au-syd.containers.appdomain.cloud/'
 def oc_command = 'create'
-def baseImage = 'java:latest'
+def baseImage = 'java'
 def s2iImagePullSecret = 'default-dockercfg-7kc7p'
 
 def cpu_limit = '30m'
