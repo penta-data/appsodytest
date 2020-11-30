@@ -8,6 +8,7 @@ def nexus_deps_repo = "$nexus_base_url/repository/ist_maven_proxy/"
 def nexus_deploy_repo = "$nexus_base_url/repository/maven-releases/"
 
 def ocp_project = 'default'
+def ocp_url = 'https://console-openshift-console.ocp-pos-fdeea28e4a34dee3e8b3354a9cbfc9f5-0000.au-syd.containers.appdomain.cloud/'
 def oc_command = 'create'
 
 def cpu_limit = '30m'
@@ -68,7 +69,7 @@ node (){
             credentialsId: 'oc-demo',
             usernameVariable: 'oc_username', passwordVariable: 'oc_password']]) {
                 //   sh 'oc login -u=${oc_username} -p=${oc_password} https://ocp.mylabzolution.com:8443 --insecure-skip-tls-verify=true'
-                    sh 'oc login --token=2Jwje_0s5HX1H8A6xc3LVYo9wdTqoq-x-vKg4iCa2bw --server=https://c100-e.au-syd.containers.cloud.ibm.com:30247'
+                    sh 'oc login --token=tJtkngVvjQ8E2HeQ0ZRS0Em5LnE7dPWf8tL_yj24X5k --server=https://c100-e.au-syd.containers.cloud.ibm.com:30247'
                }
 
         appMajorVersion = appFullVersion.substring(0, appFullVersion.indexOf('.'))
