@@ -10,6 +10,8 @@ def nexus_deploy_repo = "$nexus_base_url/repository/maven-releases/"
 def ocp_project = 'default'
 def ocp_url = 'https://console-openshift-console.ocp-pos-fdeea28e4a34dee3e8b3354a9cbfc9f5-0000.au-syd.containers.appdomain.cloud/'
 def oc_command = 'create'
+def baseImage = 'openjdk/openjdk-11-rhel7'
+def s2iImagePullSecret = 'default-dockercfg-7kc7p'
 
 def cpu_limit = '30m'
 def memory_limit = '300Mi'
@@ -95,7 +97,7 @@ node (){
 
                 oc project ${ocp_project}
                 oc process -f ./cicd-template/openshift/build-config-template.yaml -n ${ocp_project} \
-                -p S2I_BUILD_IMAGE='openjdk-11-rhel7' -p S2I_BUILD_IMAGE_PULL_SECRET='default-dockercfg-7kc7p' \
+                -p S2I_BUILD_IMAGE='${baseImage}' -p S2I_BUILD_IMAGE_PULL_SECRET='${s2iImagePullSecret}' \
                 -p APP_NAME='${appName}' -p APP_FULL_VERSION='${appFullVersion}' -p APP_MAJOR_VERSION='${appMajorVersion}' \
                 -p GIT_COMMIT_ID=${gitCommitId} -p JENKINS_BUILD_NUMBER=${BUILD_NUMBER} \
                 | oc ${oc_command} -n ${ocp_project} -f -
