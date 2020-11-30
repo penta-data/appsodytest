@@ -7,7 +7,7 @@ def nexus_base_url = 'http://10.30.30.213:8081'
 def nexus_deps_repo = "$nexus_base_url/repository/ist_maven_proxy/"
 def nexus_deploy_repo = "$nexus_base_url/repository/maven-releases/"
 
-def ocp_project = 'default'
+def ocp_project = 'openshift'
 def ocp_url = 'https://console-openshift-console.ocp-pos-fdeea28e4a34dee3e8b3354a9cbfc9f5-0000.au-syd.containers.appdomain.cloud/'
 def oc_command = 'create'
 def baseImage = 'java'
