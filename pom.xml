@@ -20,7 +20,7 @@
 
     <groupId>dev.appsody</groupId>
     <artifactId>appsody-test</artifactId>
-    <version>3.0.0</version>
+    <version>4.0.0</version>
     <description>Demo project for Appsody Spring Boot</description>
     <!--<packaging>jar</packaging>-->
     <properties>
