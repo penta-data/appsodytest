@@ -1,5 +1,5 @@
 def git_repo = 'https://github.com/penta-data/appsodytest.git'
-def public_route_prefix = ''
+def public_route_prefix = 'appsody-2'
 
 def git_branch = 'master'
 def env = 'demo'
