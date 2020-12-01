@@ -17,7 +17,6 @@
         <relativePath />
     </parent>
 
-
     <groupId>dev.appsody</groupId>
     <artifactId>appsody-test</artifactId>
     <version>16.0.0</version>
